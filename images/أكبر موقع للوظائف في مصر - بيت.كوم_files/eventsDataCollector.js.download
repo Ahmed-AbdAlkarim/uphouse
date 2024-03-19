@@ -1,0 +1,34 @@
+const UTMParams = ['utm_campaign', 'utm_medium', 'utm_source' ,'referrer','referring_domain','utm_term' , 'utm_content', 'gclid' ,'fbclid']
+
+var UTMDetected = [];
+var journifyKit = (function () {
+
+	var checkURLForUTM = function(){
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+		var currentPairs = {};
+		urlParams.forEach((element , key) => {
+			if(UTMParams.includes(key)){
+				currentPairs[key] = element ;
+			}
+		});
+	
+		if(Object.keys(currentPairs).length!= 0)
+		{
+			UTMDetected = currentPairs;
+			dispatchDetectedUTM();
+		}
+	}
+
+	var dispatchDetectedUTM = function(){
+		B8.ajax('/ajax/site/setUtmValues/', {
+			data : UTMDetected,
+			success: function (json){	
+			}
+		});
+	}
+
+	return {
+		checkURLForUTM : checkURLForUTM
+	}
+})();

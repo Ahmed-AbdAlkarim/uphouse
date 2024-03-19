@@ -1,0 +1,501 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+/* ----------------------------------------------navbar------------------------------------------------ */
+.navigation{
+    width: 100%;
+    height: 80px;
+    background-color: #2784FC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul{
+    list-style: none;
+    display:contents;
+}
+
+.navigation >  img{
+    margin-right: 10px;
+    margin-left: 20px;
+}
+.navigation > ul > li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.navigation > div  button{
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 1px solid #fff;
+    background-color: #2784FC;
+    color: #fff;
+    font-size: 17px;
+}
+/* -----------------------------------------ابحث عن وظيفة احلامك------------------------------------------ */
+.yourjob{
+    padding-top: 100px;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+.yourjob > p{
+    text-align: center;
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+form{
+    margin: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+form .half{
+    width: 45%;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 5px;
+    border: 1px solid #bbb;
+}
+
+#cnt{
+    width: 29%;
+    padding-top: 10px;
+    font-size: 30px;
+    text-align: right;
+    border-radius: 5px;
+    border: 1px solid #bbb;
+}
+
+form > .btn{
+    width: 19%;
+    padding-top: 10px;
+    font-size: 25px;
+    color: #fff;
+    background-color: #2784FC;
+    border-radius: 5px;
+    border: 1px solid #bbb;
+}
+
+.ser{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.ser > a button{
+    border-radius: 20px;
+    border: 1px solid #bbb;
+    padding: 6px;
+    font-size: 20px;
+    background-color: white;
+    color: #2784FC;
+    margin: 10px;
+}
+
+/* ----------------------------------------حمل التطبيق ------------------------------------------------- */
+
+.show{
+    text-decoration: none;
+    color: black;
+}
+
+.sec{
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    margin-top: 50px;
+}
+
+.sec .qr{
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.sec .play{
+    width: 200px;
+}
+
+.sec .app{
+    width: 200px;
+}
+.large{
+    width: 700px;    
+}
+
+/* -----------------------------------------------الشركاء------------------------------------------ */
+
+.partner{
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.partner > h2{
+    font-size: 50px;
+}
+
+.partner > button{
+    padding:6px;
+    font-size: 20px;
+    border: 1px solid ;
+    border-radius: 30px;
+}
+
+  /* ------------------------------------البحث عن الوظائف في مصر ------------------------------------ */
+
+.manyjobs{
+    background-color: #F4F4f4;
+    padding-bottom: 10px;
+}
+
+/* -----------------------------------------وظائف حسب المدينة -----------------------------------------*/
+
+.city{
+    background-color: white;
+    margin: 20px 120px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.manyjobs > h2{
+    font-size:50px;
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+.manyjobs > .city > h2{
+    font-size: 40px;
+    margin: 10px 0 20px 0;
+    width: 100%;
+}
+
+.city > .set {
+    width: 45%;
+    margin: 10px;
+}
+
+.city > .set > ul  > li{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.city > div > ul  > li .jo{
+    text-decoration: none;
+    color: #2784FC;
+    font-size: 20px;
+}
+
+.bn{
+    padding: 6px;
+    width: 250px;
+    margin-right: 70%;
+    color: #2784FC;
+    font-size: 20px;
+    border: 1px solid #2784FC;
+    border-radius: 30px;
+}
+
+/* -----------------------------------------وظائف حسب المنطقة -----------------------------------------*/
+
+.area{
+    background-color: white;
+    margin: 20px 120px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.manyjobs > h2{
+    font-size:50px;
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+.manyjobs > .area > h2{
+    font-size: 40px;
+    margin: 10px 0 20px 0;
+    width: 100%;
+}
+
+.area > .set {
+    width: 45%;
+    margin: 10px;
+}
+
+.area > .set > ul  > li{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.area > div > ul  > li .jo{
+    text-decoration: none;
+    color: #2784FC;
+    font-size: 20px;
+}
+
+.bn{
+    padding: 6px;
+    width: 250px;
+    margin-right: 70%;
+    color: #2784FC;
+    font-size: 20px;
+    border: 1px solid #2784FC;
+    border-radius: 30px;
+}
+
+/* ------------------------------------فرص عمل لدي وكالات التوظيف-------------------------------------- */
+
+.chance{
+    text-align: center;
+    padding: 20px;
+    background-color: #F4F4f4;
+}
+
+.chance > .imch{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin:40px 0;
+}
+
+.chance > .imch > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    width: 350px;
+    height: 100px;
+}
+
+.chance > .imch > div > .cl{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+    
+    height: 100px;
+}
+
+.chance > h3{
+    font-size: 50px;
+    margin: 20px;
+}
+
+.chance > .imch > div >.sz{
+    margin: 20px 40px 20px 40px;
+    width: 100px;
+}
+
+.chance > .imch > div > .cl > h4{
+    color: #2784FC;
+    font-size: 15px;
+}
+
+.chance > button{
+    padding: 6px;
+    width: 130px;
+    color: #2784FC;
+    font-size: 20px;
+    border: #2784FC 1px solid;
+    border-radius: 30px;
+    margin: 30px;
+}
+
+/* ----------------------------------------ابحث عن الوظائف بحسب البلد---------------------------------- */
+
+.cntjob{
+    padding: 50px;
+}
+
+.cntjob > h3{
+    font-size: 40px;
+    text-align: center;
+    margin: 20px;
+}
+
+.cntjob > div{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 100px;
+}
+
+.cntjob > div > a >img{
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.cntjob > button{
+    padding: 6px;
+    width: 170px;
+    color: #2784FC;
+    font-size: 20px;
+    margin-right: 41%;
+    border: 1px solid #2784FC;
+    border-radius: 30px;
+}
+
+/* -------------------------------------------احدث المقالات---------------------------------------------- */
+
+.recent{
+    background-color: #F4F4f4;
+    padding: 20px 0;
+}
+
+.recent > h3{
+    font-size: 40px;
+    text-align: center;
+}
+
+.recent > div{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 120px;
+}
+
+.recent > div >.card{
+    margin: 20px;
+}
+
+.recent > button{
+    padding: 6px;
+    width: 250px;
+    color: #2784FC;
+    font-size: 20px;
+    margin-right: 38.7%;
+    border: 1px solid #2784FC;
+    border-radius: 30px;
+}
+
+.card-body > a{
+    text-decoration: none;
+    color: black;
+}
+
+.card-body > a:hover{
+    color: #2784FC;
+}
+
+/* -------------------------------ابحث عن وظائف---------------------------------------------- */
+
+.all{
+    background-color: white;
+    margin: 20px 120px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;  
+}
+
+.aboutjob> .all > h4{
+    font-size: 30px;
+    margin: 10px 0 20px 0;
+    width: 100%;
+}
+
+.all > .set {
+    width: 15%;
+    margin: 10px;
+}
+.all > div > ul  > li a{
+    text-decoration: none;
+    color: black;
+}
+.all > div > ul  > li a:hover{
+    color: #2784FC;
+}
+
+/* ----------------------------------------نبذة عن بيت,كوم----------------------------------------- */
+
+.about{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 20px;
+}
+
+.abouthouse {
+    margin: 20px;
+}
+
+.ourcompany{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.fast{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.ourcompany> a{
+    text-decoration: none;
+    color: black;
+}
+.ourcompany> a:hover{
+    color: #2784FC;
+}
+
+.fast > a{
+    text-decoration: none;
+    color: black;
+}
+
+.fast > a:hover{
+    color: #2784FC;
+}
+
+/* -------------------------------------------------footer------------------------------------------------- */
+
+.footer{
+    padding: 0 20px;
+    margin-top: -60px;
+}
+
+.footer > h2{
+    margin: 20px;
+}
+
+.footer > div{
+    margin: 20px;
+}
+
+.footer > div > a{
+    margin: 5px ;
+    text-decoration: none;
+    color: black;
+}
+
+.ufoot > a{
+    text-decoration: none;
+    color: black;
+}
+
+.ufoot > a:hover{
+    color: #2784FC;
+}

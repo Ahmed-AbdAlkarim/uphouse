@@ -1,0 +1,22 @@
+window.addEventListener("DOMContentLoaded",()=>{B8.ready(function(){var csrfToken=document.querySelector('[name="YII_CSRF_TOKEN"]');if(csrfToken!=null)
+csrfToken.value=B8v.csrf.token;var pollsForm=document.querySelectorAll('[name="poll"]');if(pollsForm.length!=0)
+{for(let index=0;index<pollsForm.length;index++){pollsForm[index].addEventListener("submit",function(e){e.preventDefault();pollsWidget.submitPollsForm();},true);pollsForm[index].addEventListener("change",function(){pollsWidget.onChangingChoices();});}}
+else
+{pollsWidget.shimmerTransition();}})});var skipInterval=false;var pollsWidget=(function(){var submitPollsForm=function(){if(!skipInterval)
+{var pollsForm=B8.get('[name="poll"]');var formData=new FormData(pollsForm);formData.append('submit','submit');saveUserChoice(formData.get('choice_id'));if(!skipInterval)
+B8.ajax('/ajax/Pages/Pages/PollFormResponseV2/',{data:formData,method:"POST",success:function(response){if(response.status==200)
+{if(response.updatedRes!=undefined)
+updateResults(response.updatedRes);shimmerTransition();}
+if(response.redirectUrl!='')
+window.location=response.redirectUrl;},error:function(){location.reload();},beforeSend:function(){skipInterval=true;}});}}
+var saveUserChoice=function(choice){if(choice!=null&&choice!="")
+{var choiceText=document.querySelector('[for="choice_id_'+choice+'"]').innerHTML;sessionStorage.setItem("userPollChoice",choiceText);}}
+var updateResults=function(newHtml){var pollResults=document.querySelectorAll('.pollResults');for(let index=0;index<pollResults.length;index++){pollResults[index].innerHTML=newHtml;}}
+var selectChoice=function(){var pollLabels=document.querySelectorAll('.pollLabels');if(sessionStorage.getItem("userPollChoice")!=null&&pollLabels!=null)
+{var innertexts=[];for(let index=0;index<pollLabels.length;index++){innertexts.push(pollLabels[index].innerHTML.trim());}
+if(innertexts.includes(sessionStorage.getItem("userPollChoice"))){for(let index=0;index<pollLabels.length;index++){if(sessionStorage.getItem("userPollChoice").trim()!=pollLabels[index].innerHTML.trim())
+pollLabels[index].parentElement.querySelector('div').querySelector('div').classList.add('bg-lite');}}}}
+var shimmerTransition=function(){var sliderElement=B8.resolve('slider','#pollsSlider');if(sliderElement!=null){sliderElement.next();pollsWidget.selectChoice();setTimeout(()=>{var results=document.querySelectorAll('.pollsResults.shimmer');for(let index=0;index<results.length;index++){results[index].remove();}
+var results=document.querySelectorAll("li.pollsItems");for(let index=0;index<results.length;index++){results[index].classList.remove('u-none');}},"500");}}
+var onChangingChoices=function(){submitButton=B8.get('#pollSubmit');submitButton.removeAttribute("disabled");}
+return{submitPollsForm:submitPollsForm,onChangingChoices:onChangingChoices,shimmerTransition:shimmerTransition,updateResults:updateResults,selectChoice:selectChoice}})();
